@@ -1,0 +1,25 @@
+#N canvas 137 208 1052 594 12;
+#X obj 132 43 im.makeymakey, f 59;
+#X obj 30 43 im.microphone;
+#X obj 28 225 im.speaker;
+#X obj 30 112 im.oneshot ../authenticity.wav;
+#X obj 564 26 cnv 15 200 80 empty empty inputs 25 15 0 30 -203904 -66577
+0;
+#X obj 570 60 im.microphone;
+#X obj 569 83 im.makeymakey;
+#X obj 563 117 cnv 15 400 90 empty empty samplers 25 15 0 20 -262130
+-66577 0;
+#X obj 571 169 im.oneshot;
+#X obj 565 215 cnv 15 300 100 empty empty outputs 25 15 0 30 -203904
+-66577 0;
+#X obj 579 280 im.speaker;
+#X text 670 62 take audio from the microphone;
+#X text 670 84 a set of keypresses for easy access to makey makey,
+f 51;
+#X text 654 170 record and play a sound file;
+#X text 659 281 a mono output;
+#X text 27 538 Press cmd-1 to create a new object;
+#X connect 0 0 3 1;
+#X connect 0 1 3 2;
+#X connect 1 0 3 0;
+#X connect 3 0 2 0;
